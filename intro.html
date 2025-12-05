@@ -28,7 +28,7 @@
         animation: fadeIn 1.3s ease forwards;
     }
 
-    /* Fade to black before redirect */
+    /* Fade to black */
     .fadeOut {
         animation: fadeOut 1s ease forwards;
     }
@@ -65,16 +65,10 @@
 <body>
 
 <div class="video-container">
-    <!-- Your new intro video -->
     <video id="introVideo" autoplay muted playsinline>
         <source src="logo.mp4" type="video/mp4">
     </video>
 </div>
-
-<a href="index.html" style="color:white; font-size:20px; position:fixed; bottom:20px; left:20px; z-index:20;">
-    👉 Go to Main Page
-</a>
-
 
 <button id="skipBtn" class="skip-btn">⏭ Skip</button>
 
@@ -82,20 +76,18 @@
 const video = document.getElementById("introVideo");
 const skipBtn = document.getElementById("skipBtn");
 
-/* Skip function */
+/* ========== GO TO MAIN PAGE FUNCTION ========== */
 function goToMain() {
     video.classList.add("fadeOut");
 
-  setTimeout(function () {
-    window.location.href = "index.html"; 
-  }, 5000); // 5 seconds — change as needed
+    setTimeout(function () {
+        window.location.href = "index.html";
+    }, 1000); // fade-out time
+}
 
-
-/* Skip button click */
-skipBtn.addEventListener("click", goToMain);
-
-/* When video ends */
-video.addEventListener("ended", goToMain);
+/* ========== EVENTS ========== */
+skipBtn.addEventListener("click", goToMain);   // User clicks skip
+video.addEventListener("ended", goToMain);     // Video finishes
 </script>
 
 </body>
