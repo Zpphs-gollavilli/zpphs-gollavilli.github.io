@@ -86,10 +86,10 @@ const skipBtn = document.getElementById("skipBtn");
 function goToMain() {
     video.classList.add("fadeOut");
 
-    setTimeout(() => {
-        window.location.href = "index.html"; // redirect to your homepage
-    }, 900); // match fadeOut speed
-}
+  setTimeout(function () {
+    window.location.href = "index.html"; 
+  }, 5000); // 5 seconds — change as needed
+
 
 /* Skip button click */
 skipBtn.addEventListener("click", goToMain);
