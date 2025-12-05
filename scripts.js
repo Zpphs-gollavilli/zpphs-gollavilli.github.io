@@ -1,3 +1,10 @@
+// ===== INTRO REDIRECT (Runs BEFORE page loads) =====
+if (!sessionStorage.getItem("introPlayed")) {
+    sessionStorage.setItem("introPlayed", "yes");
+    window.location.href = "intro.html";
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         const classFilter = document.getElementById('classFilter');
@@ -89,6 +96,11 @@ dots.forEach((dot, i) => {
 
 // Auto Slide Every 5 Seconds
 setInterval(nextSlide, 5000);
+
+
+
+
+
 
 
 function updateLessonsAndFilterNotes() {
