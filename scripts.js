@@ -1,7 +1,7 @@
 // ===== INTRO REDIRECT (Runs BEFORE page loads) =====
 if (!sessionStorage.getItem("introPlayed")) {
     sessionStorage.setItem("introPlayed", "yes");
-    window.location.href = "intro.html";
+    window.location.href = "index.html";
 }
 
 
