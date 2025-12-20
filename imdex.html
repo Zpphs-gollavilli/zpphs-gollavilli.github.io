@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZPPHS Government School - Empowering students for a better future">
+    <title>ZPPHS Government School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-fixed">
+        <div class="header-limiter">
+            <h1>ZPPHS Gollavilli Government School</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#meal-schedule">Meal Schedule</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="message-adv">
+
+        <h1 id="sign">ZPPHS GOLLAVILLI WHERE PERFECTION MEETS PRECISION</h1>
+        <!-- 🔹 School Banner Carousel Section -->
+        <div class="banner-container">
+            <div class="carousel">
+                <div class="slides">
+                    <img src="banner.jpg" alt="School Banner 1" class="active">
+                    <img src="banner2.jpg" alt="School Banner 2">
+                    <img src="banner3.jpg" alt="School Banner 3">
+                    <!-- <img src="banner4.jpg" alt="School Banner 4"> -->
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
+                <!-- Dots -->
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <!-- <span class="dot"></span> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to ZPPHS Gollavilli Government School</h2>
+        <p>Our School's mission is to provide quality education to every student.</p>
+        <p>"Education is the most powerful weapon which you can use to change the world."</p>
+    </section>
+    <h2 class="news-heading">News Article on Independence Day 2024 Celebrations at Our School</h2>
+    <div class="image-container">
+        <img src="news_eenadu_15Aug.png" alt="Independence Day News">
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner-container">
+        <div class="banner">
+            <!-- First Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/0nzRDdzcKZg" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="banner">
+            <!-- Second Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oc2s-W6RlZI" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="banner">
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/9tDiWgCgQsw" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Our School</h2>
+        <p>ZPPHS Government School is dedicated to delivering excellence in education, offering a range of programs
+            designed to help students achieve success.
+            Founded in 1951, ZPHS Gollavilli is managed by the local authorities and is situated in the rural area of
+            Uppalaguptam block, East Godavari district, Andhra Pradesh. The school serves students from grades 6 to 10
+            and is co-educational. The school offers instruction in both English and Telugu mediums, providing students
+            with the flexibility to learn in the language they are most comfortable with.
+            The school is easily accessible via an all-weather road, with the academic session commencing in April each
+            year. Despite having limited infrastructure, the school is well-maintained, featuring classrooms that are in
+            good condition, and a separate room for the Headmaster or teachers.
+            The school has basic sanitation facilities, including two functional boys' toilets and one functional girls'
+            toilet. A spacious playground is available for the students. The school is equipped with ramps to ensure
+            that disabled children can access the classrooms easily. Additionally, the school has computers and a
+            dedicated computer lab for teaching and learning purposes.
+            The school also participates in the mid-day meal program, ensuring that students are provided with meals
+            during the school day.</p>
+        <br />
+        <h2>Our Mission</h2>
+        <p>Our mission is to establish a strong bridge of communication between Our school and students, fostering a
+            seamless exchange of academic and cultural activities.</p>
+        <p>Our inaugural program, <b>"Sharing Notes"</b> is designed to support students in catching up on missed
+            coursework due to absences.</p>
+        <p>This initiative aims to ensure that all students have access to the necessary academic resources to stay on
+            track and succeed in their studies.</p>
+        <br>
+    </section>
+
+
+    <section id="sharing-notes">
+        <h2>Sharing Notes</h2>
+        <p>Below are the available notes categorized by class, subject, and lesson number. Use the filters to narrow
+            down your search.</p>
+
+        <!-- Filters Section -->
+        <div id="filters">
+            <label for="classFilter">Class:</label>
+            <select id="classFilter">
+                <option value="all">All Classes</option>
+                <option value="6th">6th</option>
+                <option value="10th">10th</option>
+                <!-- Add more classes as needed -->
+            </select>
+
+
+            <label for="subjectFilter">Subject:</label>
+            <select id="subjectFilter">
+                <!-- This will be populated dynamically based on the selected class -->
+            </select>
+
+
+
+            <label for="lessonFilter">Lesson:</label>
+            <select id="lessonFilter">
+                <!-- <option value="all">All Lessons</option>
+                <option value="Lesson 1">Lesson 1</option>
+                <option value="Lesson 2">Lesson 2</option>
+                <option value="Lesson 3">Lesson 3</option>
+                <option value="Lesson 4">Lesson 4</option>
+                Add more lessons as needed -->
+            </select>
+        </div>
+
+        <div id="pdfList">
+            <h3>Available Notes</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Subject</th>
+                            <th>Lesson Number</th>
+                            <th>PDF Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-class="6th" data-subject="Social" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>Social</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_SS_L1.pdf" target="_blank">Our Earth
+                                    In Solar System</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Social" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>Social</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_SS_L2.pdf"
+                                    target="_blank">Globe-Model Of The Earth</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="English" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>English</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_EN_L1.pdf" target="_blank">Who Did
+                                    Patrick's Homework?</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="English_SR" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>English (S.R)</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_EN_L1_SR.pdf" target="_blank">A Tale
+                                    Of Two Birds</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="English" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>English</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_EN_L2.pdf" target="_blank">How The
+                                    Dog Found Himself A New Master</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="English_SR" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>English (S.R)</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_EN_L2_SR.pdf" target="_blank">The
+                                    Friendly Mongoose</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="English" data-lesson="Lesson 3">
+                            <td>6th</td>
+                            <td>English</td>
+                            <td>Lesson 3</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_EN_L3.pdf" target="_blank">Taro's
+                                    Reward</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Maths" data-lesson="Introductory Classes">
+                            <td>6th</td>
+                            <td>Maths</td>
+                            <td>Introductory Classes</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_MA_IC.pdf" target="_blank">Place
+                                    Values</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Maths" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>Maths</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_MA_L1.pdf" target="_blank">Knowing
+                                    Our Numbers</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Maths" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>Maths</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_MA_L2.pdf" target="_blank">Whole
+                                    Numbers</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Maths" data-lesson="Lesson 3">
+                            <td>6th</td>
+                            <td>Maths</td>
+                            <td>Lesson 3</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_MA_L3.pdf" target="_blank">Playing
+                                    With Numbers</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Science" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>Science</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_GS_L1.pdf"
+                                    target="_blank">Components Of Food</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Science" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>Science</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_GS_L2.pdf" target="_blank">Sorting
+                                    Materials Into Groups</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Telugu" data-lesson="Lesson 1">
+                            <td>6th</td>
+                            <td>Telugu</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_TE_L1.pdf" target="_blank">అమ్మ
+                                    ఒడి</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Telugu" data-lesson="Lesson 2">
+                            <td>6th</td>
+                            <td>Telugu</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_TE_L2.pdf"
+                                    target="_blank">తృప్తి</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Telugu" data-lesson="Lesson 3">
+                            <td>6th</td>
+                            <td>Telugu</td>
+                            <td>Lesson 3</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_TE_L3.pdf" target="_blank">మాకొద్ది
+                                    తెల్ల దొరతనము</a></td>
+                        </tr>
+                        <tr data-class="6th" data-subject="Telugu" data-lesson="Lesson 4">
+                            <td>6th</td>
+                            <td>Telugu</td>
+                            <td>Lesson 4</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/6_TE_L4.pdf"
+                                    target="_blank">సమయస్పూర్తి</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="Maths" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>Maths</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_MA_L1.pdf" target="_blank">Real
+                                    Nubmers</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="Maths" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>Maths</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_MA_L2.pdf"
+                                    target="_blank">Polynomials</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="English" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>English</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_EN_L1.pdf" target="_blank">A LETTER
+                                    TO GOD</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="English" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>English</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_EN_L2.pdf" target="_blank">DUST OF
+                                    SNOW</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="English" data-lesson="Lesson 3">
+                            <td>10th</td>
+                            <td>English</td>
+                            <td>Lesson 3</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_EN_L3.pdf" target="_blank">FIRE AND
+                                    ICE</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="English" data-lesson="Lesson 4">
+                            <td>10th</td>
+                            <td>English</td>
+                            <td>Lesson 4</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_EN_L4.pdf" target="_blank">NELSON
+                                    MANDELA-Long Walk To Freedom</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="science_physics" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>Science Physics</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_GS_L1_PS.pdf"
+                                    target="_blank">Chemical Reactions and Equations</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="science_physics" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>Science Physics</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_GS_L2_PS.pdf" target="_blank">LIGHT
+                                    - Reflection & Refraction</a></td>
+                        </tr>
+
+                        <tr data-class="10th" data-subject="Hindi" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>Hindi</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_HN_L1.pdf" target="_blank">साखी</a>
+                            </td>
+                        </tr>
+                        <tr data-class="10th" data-subject="Hindi" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>Hindi</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_HN_L2.pdf" target="_blank">पद -
+                                    मीरा</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="social_economics" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>Social Economics</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_SS_L1_Eco.pdf"
+                                    target="_blank">Development</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="social_economics" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>Social Economics</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_SS_L2_Eco.pdf"
+                                    target="_blank">Sectors of Indian Economy</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="social_geography" data-lesson="Lesson 1">
+                            <td>10th</td>
+                            <td>Social Geography</td>
+                            <td>Lesson 1</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_SS_L1_Geo.pdf"
+                                    target="_blank">Resources and Development</a></td>
+                        </tr>
+                        <tr data-class="10th" data-subject="social_geography" data-lesson="Lesson 2">
+                            <td>10th</td>
+                            <td>Social Geography</td>
+                            <td>Lesson 2</td>
+                            <td><a href="https://zpphs-gollavilli.github.io/Notes/10_SS_L2_Geo.pdf"
+                                    target="_blank">Forest and Wildlife Resources</a></td>
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Meal Schedule Section -->
+    <section id="meal-schedule">
+        <h2>Midday Meal Schedule</h2>
+        <table class="meal-schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Meal (Daily Egg Except Saturday)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Biryani, Potato Curry</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Pulihara, Ridge Gourd Pickle (Birakaya)</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Vegetable Biryani, Egg Curry</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>White Rice, Sambar</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>White Rice, Dal and Fresh Amaranth (Thotakura)</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Vegetable Biryani, Sweet, Sambar</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="note">These items are fresh and nutritious. The mid-day meal program at our
+                        school ensures that students receive balanced meals, promoting their health and enhancing their
+                        ability to focus and learn.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimonials and Feedback</h2>
+        <div class="testimonial">
+            <h3>Testimonials</h3>
+            <p>"ZPPHS School has transformed my child's life. The teachers are supportive, and the curriculum is
+                excellent!"</p>
+            <cite>- Parent</cite>
+        </div>
+        <div class="achievement">
+            <h3>Achievements</h3>
+            <ul>
+                <li>Top performing school in the district (2023)</li>
+                <li>Best school award for extra-curricular activities (2022)</li>
+                <li>100% pass rate in board exams (2021)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <h4 class="styled-heading">Share Your Thoughts and Suggestions</h4>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="from_name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="from_email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ZPPHS Government School Gollavilli. All rights reserved.</p>
+        <p>Site prepared by G Siddharth - VII B , R Sri Kumar - IX A  </p>
+    </footer>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="scripts.js"></script>
+
+
+</body>
+
+</html>
