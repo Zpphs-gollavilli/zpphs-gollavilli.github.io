@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+// ===== INTRO REDIRECT (Runs BEFORE page loads) =====
+if (!sessionStorage.getItem("introPlayed")) {
+    sessionStorage.setItem("introPlayed", "yes");
+    window.location.href = "index.html";
+}
+
+
+>>>>>>> 16c7c9defeffd6b63b8be4c8a604f8735f55e9d9
 document.addEventListener('DOMContentLoaded', () => {
     try {
         const classFilter = document.getElementById('classFilter');
@@ -91,6 +101,14 @@ dots.forEach((dot, i) => {
 setInterval(nextSlide, 5000);
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 16c7c9defeffd6b63b8be4c8a604f8735f55e9d9
 function updateLessonsAndFilterNotes() {
     const classFilterValue = document.getElementById('classFilter').value.toLowerCase();
     const subjectFilterValue = document.getElementById('subjectFilter').value.toLowerCase();
