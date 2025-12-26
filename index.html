@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== VIDEO CONTAINER ===== */
+.video-container {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+/* ===== VIDEO ===== */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation: fadeIn 1.3s ease forwards;
+}
+
+/* ===== FADE OUT ===== */
+.fadeOut {
+    animation: fadeOut 1s ease forwards;
+}
+
+/* ===== BUTTONS ===== */
+.controls {
+    position: fixed;
+    bottom: env(safe-area-inset-bottom, 20px);
+    right: env(safe-area-inset-right, 20px);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.25);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+@media (hover: hover) {
+    button:hover {
+        background: rgba(255,255,255,0.45);
+        transform: scale(1.05);
+    }
+}
+
+/* ===== SMALL DEVICES ===== */
+@media (max-width: 600px) {
+    button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+/* ===== PLAY INTRO ONLY ONCE ===== */
+if (sessionStorage.getItem("introPlayed")) {
+    window.location.href = "main.html";
+}
+</script>
+
+<div class="video-container">
+    <video id="introVideo" autoplay muted playsinline>
+        <source src="logo.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="controls">
+    <button id="soundBtn">🔊 Sound</button>
+    <button id="skipBtn">⏭ Skip</button>
+</div>
+
+<script>
+const video = document.getElementById("introVideo");
+const skipBtn = document.getElementById("skipBtn");
+const soundBtn = document.getElementById("soundBtn");
+
+let soundOn = false;
+
+/* ===== GO TO MAIN PAGE ===== */
+function goToMain() {
+    video.classList.add("fadeOut");
+    sessionStorage.setItem("introPlayed", "true");
+
+    setTimeout(() => {
+        window.location.href = "main.html";
+    }, 1000);
+}
+
+/* ===== EVENTS ===== */
+skipBtn.addEventListener("click", goToMain);
+
+video.addEventListener("ended", goToMain);
+
+/* ===== SOUND TOGGLE ===== */
+soundBtn.addEventListener("click", () => {
+    soundOn = !soundOn;
+    video.muted = !soundOn;
+    video.play();
+
+    soundBtn.textContent = soundOn ? "🔇 Mute" : "🔊 Sound";
+});
+</script>
+
+</body>
+</html>
